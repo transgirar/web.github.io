@@ -324,11 +324,9 @@
       .title {
         font-size: 3.5rem;
       }
-
       .left-content {
         padding: 50px;
       }
-
       .bottom-bar {
         padding: 30px 50px;
       }
@@ -338,29 +336,26 @@
       .main-container {
         flex-direction: column;
       }
-
       .left-content {
         max-width: 100%;
         background: var(--dark-green);
         padding: 40px 30px;
       }
-
       .right-content {
         display: none;
       }
-
-      /* Hide image on smaller screens to keep focus on CTA */
+      .right-text {
+        display: none; /* Hide floating text when right image is gone */
+      }
       .bottom-bar {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
         padding: 40px 30px;
       }
-
       .info-card {
         border-right: none;
         align-items: flex-start;
       }
-
       .features-grid {
         max-width: 100%;
       }
@@ -369,33 +364,80 @@
     @media (max-width: 768px) {
       .features-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
+        gap: 20px;
       }
-
       .title {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
       }
-
       .bottom-bar {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 30px;
       }
-
       .cta-button {
-        flex-direction: column;
-        padding: 20px;
+        padding: 10px 15px 10px 60px;
         gap: 15px;
-        border-radius: 20px;
-        text-align: center;
       }
-
       .cta-left-icon {
-        position: static;
-        margin-bottom: 10px;
+        width: 35px;
+        height: 35px;
+        left: 12px;
+        font-size: 1.1rem;
       }
+      .cta-right-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+      }
+      .cta-text strong {
+        font-size: 1.3rem;
+      }
+    }
 
-      .cta-text {
-        padding: 0;
+    @media (max-width: 480px) {
+      .left-content {
+        padding: 30px 20px;
+      }
+      .logo-area {
+        margin-bottom: 30px;
+      }
+      .logo-area i {
+        font-size: 2rem;
+      }
+      .logo-area h2 {
+        font-size: 1.4rem;
+      }
+      .title {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+      }
+      .description {
+        font-size: 1rem;
+        max-width: 100%;
+      }
+      .features-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+      .feature-item {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        gap: 15px;
+      }
+      .feature-icon {
+        margin: 0;
+        min-width: 50px;
+      }
+      .cta-button {
+        align-self: stretch;
+        justify-content: center;
+        padding: 12px 15px 12px 55px;
+      }
+      .cta-text strong {
+        font-size: 1.1rem;
+      }
+      .bottom-bar {
+        padding: 30px 20px;
       }
     }
   </style>
